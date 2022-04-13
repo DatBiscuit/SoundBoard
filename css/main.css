@@ -1,0 +1,48 @@
+:root {
+    --buttonDown: url('/img/ButtonDown.png');
+    --buttonUp: url('/img/ButtonUp.png');
+}
+
+#buttons {
+    height: 80%;
+    width: 80%;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.soundButton {
+    background-image: var(--buttonUp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 64px;
+    max-height: 64px;
+    min-width: 32px;
+    min-height: 32px;
+    color: none;
+}
+
+.soundButton:active {
+    background-image: var(--buttonDown);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 2%;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    margin-left: auto;
+    width: 20%;
+    height: 40%;
+    float: right;
+}
