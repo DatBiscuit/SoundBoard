@@ -1,12 +1,25 @@
-
+<!-- 
 <?php
+
+include 'config.php';
+
 $dir = "../media/";
 $file = $dir . basename($_FILES["fileForUpload"]["name"]);
 $uploadOk = 1;
 
-// Check if image file is a actual image or fake image
+$connection = ssh2_connect('soundboard.datbiscuit.tools');
+ssh2_auth_password($connection, $userAdmin, $pswdAdmin);
+
+$stream = ssh2_exec($connection, '/usr/local/bin/php -i');
+
+if(!$stream) {
+  echo "Stream doesnt exist";
+} else {
+  echo "Stream does exist"
+}
+
+// Check if image file is a actual file
 if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileForUpload"]["tmp_name"]);
   if(file_exists(($file))) {
     echo "File already exists";
     $uploadOk = 0;
@@ -27,4 +40,4 @@ if ($uploadOk == 0) {
       echo "Sorry, there was an error uploading your file.";
     }
   }
-?>
+?> -->

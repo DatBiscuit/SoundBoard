@@ -56,9 +56,9 @@
                             elem.remove();
                             </script>
                             <form action='script/upload.php' method='post' enctype='multipart/form-data'>
-                            Select media to upload:
+                            Select .wav to upload:
                             <input type='file' name='fileForUpload' id='fileForUpload'>
-                            <input type='submit' value='Upload Image' name='submit'>
+                            <input type='submit' value='Upload Sound' name='submit'>
                             </form>
                             
                             ";
